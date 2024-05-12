@@ -36,3 +36,37 @@ Loop Assignment
  	*
  	*
  	*******
+======================================================
+11-05-2024
+===========
+create array for your personal data 
+calculate total data
+iterate array using simple for loop and for each loop
+
+Login scenario
+===============
+username   password     email
+Kiran      test123    kiran@gmail.com
+Soumya     test123    soumya@gmail.com
+Dhanashree  test123   dhanashree@gmail.com
+
+
+create array  for the this type data and calculate number of rows and columns
+
+Write a java program to skip heading from array and print only data
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
