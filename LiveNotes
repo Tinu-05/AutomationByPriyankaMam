@@ -1,0 +1,519 @@
+
+Selenium WebDriver
+========================
+Selenium WebDriver is an API for WebUI automation testing
+
+=================
+Setup for Java Project
+=========================
+1.create new java project
+2.download selenium jar (selenium.dev)
+3.Right click on Project--->Build path--->Configure build path-->libraries
+--->class path--->Add external library
+
+SetUp for Maven Project
+==========================
+Maven is Project management tool
+Maven is Build management tool
+
+1.pom.xml
+============
+This is configuration file for a project
+POM stand for Project Object Model
+It include Project structure
+
+<project>
+
+<dependencies>
+
+<dependency> Selenium </dependency>
+
+</dependencies>
+
+
+<build>
+<plugin> surefireplugin </plugin>
+</build>
+
+
+</project>
+======================================
+What is dependency
+====================
+It is an executable file(library)
+
+
+Repositories of Maven
+============================
+1.Local
+=============
+/users/.m2 folder
+
+2.Remote/Central
+=======================
+mvnrepository.com
+
+===============================================
+26-05-2024
+============
+Interview Question
+====================
+1.How to open empty browser
+WebDriver driver=new ChromeDriver();
+
+Selenium WebDriver
+=====================
+Selenium Exceptions
+=========================
+1.For Wrong url :InvalidArgumentException: invalid argument
+2.InvalidSelectorException: Compound class names not permitted
+
+Manual Testing test case
+-----------------------------
+Test Case:Test title of Google applicationIt should be Google
+==================================================================
+Step1: Open Browser with google Application
+step2: Get the current title of application
+Step3: Compare title with expected title
+Step4: As per comparison print the result
+Step5: close the browser
+
+WebDriver Commands
+======================
+1.Browser commands
+=======================
+1.get(url)
+2.getTitle()
+3.getCurrentUrl()
+4.getPageSource()
+5.close()
+6.quit()
+
+
+2.Navigation commands for Browser
+========================================
+Selenium has Navigation interface available 
+
+1.to(url):Navigate to ne app
+------------------
+driver.navigate().to(url)
+
+2.back()
+-------------------
+driver.navigate().back()
+
+3.forward()
+--------------------
+driver.navigate().forward()
+
+4.refresh()
+-----------------------
+driver.navigate().refresh()
+
+=============================================================
+Synchronization is Selenium?
+==================================
+-Time mapping between tool and application is called Synchronization
+-As tool always run faster and application may need extra time to load element so 
+time issues get occured!
+
+Selenium has Waits
+-======================
+1.Static wait
+====================
+Thread.sleep(2000)
+Its a java concept
+Its a hard coded wait
+
+Default time out for selenium is 500ms means 0.5 seconds
+
+
+2.Dynamic Wait
+======================
+1.Implicit wait
+==================
+- Implicit wait is a global wait
+- applicable to all elements to script 
+- If elements needs 5sec timeout and Implicit wait is applied 10sec then
+selenium will not wait for remaining 5sec. it will continue with next element
+syntax:
+===============
+driver.manage().timeouts().implicitilyWait(Duration.ofSeconds(10));
+
+=============
+2.Explicit Wait
+==================
+- It is not global 
+-applicable saperately to every seperate element
+- it wait as per condition for that element
+
+In selenium Wait interface available
+===========
+1.WebDriverWait class
+2.FluentWait class
+
+WebDriverWait(c) extends FluentWait(c) implements Wait(I)
+
+
+
+
+
+
+
+
+
+=================================================
+1-06-2024
+================
+
+What is WebElement?
+========================
+All GUI element are called WebElement.
+technically WebElement is interface in selenium
+
+1.Identify WebElement
+2.Perform action on that webElement
+
+How selenium identify WebElement
+==================================
+Selenium identify WebElement using locators?
+
+Locator is address of WebElement from that webpage
+
+Selenium support total 8 loctaors
+================================
+1.By id
+2.By name
+3.By className
+4.By linkText
+5.By partialLinkText
+6.By tagName
+
+Dynamic Locators
+====================
+7.By cssSelector
+8.By xpath
+
+====================================
+1.To identify Element
+============================
+1.findElement()
+======================
+-findElement identify one single element
+-return type of this method is WebElement object
+- If Element not found it throws NoSuchElementException.
+
+
+2.findElements()
+====================
+-findElements() identify multiple webelements
+-return type is List<WebElement> 
+-If element not found then findElements()never throws any exception
+
+=========================
+2.Perform action
+=====================
+textbox,searchbox---- write---->sendKeys("",Keys class)
+clear the text----->clear()
+button,link,checkbox,radio button----click------>click()
+
+WebElement Methods
+========================
+getText()
+===============
+Any visible text you can capture
+html inner text also you can find
+
+getAttribute(attribute name)
+===================================
+returns value of attribute
+validation
+============
+isDisplayed()
+isEnabled()
+isSelected()
+
+===========================================
+className Locator
+=========================
+InvalidSelectorException: Compound class names not permitted
+Selenium not work with  mutiple class names
+
+class="submit-button btn_action"
+			class1      class2
+
+open finder: clrt+f
+check for the unique class name 
+and add it into locator
+
+====================================================
+Link automtaion in Selenium
+===================================
+1.linkText (full text)
+----------------
+It perform exact matching 
+
+2.partialLinklText (partial text)
+----------------------
+It perform partial matching
+
+<a href="url" name=''> visible text</a>
+
+<a id="SignIn" href="login.html"> Sign In </a>
+
+									text
+									
+===============================================
+tagname
+============
+multiple weblements we have same tag name
+
+number of textboxes <input>
+number of images  <img>
+number of links  <a>
+
+Live task:
+===================
+1.calculate number of links from naukri page and get the attribute value and text
+https://www.naukri.com/
+
+===============================
+Dynamic Locators
+===============
+1.By cssSelector
+
+2.Xpath
+
+cssSelector
+================
+what is css?
+--------------
+Cascaded style sheet is a language which used to provides styles to the webelement
+
+what is cssSeelector?
+=================
+It is a locator used in selenium to interact with webelement by directly using
+id,classname or any attribute
+cssSelector syntax is simple
+cssSelector is faster than xpath as it travels in one direction
+(parent------>child)
+cssSelector is dynamic but with limited method support
+cssSelector not support any axies
+using csssElector text you can't capture
+CssSelector not support indexing
+
+syntax:
+===========
+1.tagname with id-#
+=======================
+syntax:
+===========
+tagname#id
+input#input-email
+
+
+2.tagname with classname
+=========================
+class="btn btn-primary"   2 class names
+
+Syntax:
+================
+tagname.classname
+
+input.btn.btn-primary
+
+
+
+3.tagname with attribute
+========================
+Syntax
+===============
+tagname[attribute='value']
+
+input[type='password']
+
+4.tagname with id,class,attribute
+=====================================
+Synatx:
+=============
+tagname#id.className[attribute='value']
+
+input.btn.btn-primary[value='Login']
+
+=====================
+* contains- partial value
+========================
+Syntax
+============
+tagname[attribute *='value']
+
+input[placeholder *='E-Mail Address']
+
+input[placeholder *='Address']
+input[placeholder *='E-Mail']
+-----------------------------------------
+$- ends with'
+================
+Syntax:
+==============
+tagname[attribute $='suffix value']
+
+input[value$='Login']
+-----------------------------------------
+
+^ - starts with
+======================
+Syntax
+========
+tagname[attribute ^='prefixvalue']
+
+input[placeholder^='Pas']
+
+======================================
+
+Assignments
+=================
+1.Automate Orangehrm login and logout application using csselector
+
+2.Automate Crm application login and logout using cssSelector
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									
+
+
+
+
+
+
+=================HTML DOM========================
+<html>
+<head>
+</head>
+
+<body>
+
+<input type='text' id='aa' name='a'>
+
+tagname:   input
+attribute = type, name ,id
+values=     text, a    , aa
+
+
+</body>
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
