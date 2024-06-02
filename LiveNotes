@@ -290,7 +290,7 @@ what is css?
 --------------
 Cascaded style sheet is a language which used to provides styles to the webelement
 
-what is cssSeelector?
+what is cssSelector?
 =================
 It is a locator used in selenium to interact with webelement by directly using
 id,classname or any attribute
@@ -352,7 +352,7 @@ input[placeholder *='E-Mail Address']
 input[placeholder *='Address']
 input[placeholder *='E-Mail']
 -----------------------------------------
-$- ends with'
+$- ends with
 ================
 Syntax:
 ==============
@@ -376,6 +376,276 @@ Assignments
 1.Automate Orangehrm login and logout application using csselector
 
 2.Automate Crm application login and logout using cssSelector
+
+==============================================================
+2-06-2024
+==============
+8. By xpath
+================
+What is xpath?
+====================
+xpath is path of the element from xml and html document
+Xpath identify element directly from DOM(document object Model)
+Xpath can travel in forward and backward
+Xpath support multiple methods
+xpath support index and poistion()
+Xpath support axies
+
+
+=============html Dom==================
+<html>--------root element
+<head>
+</head>
+<body>
+
+<input type="text">--------element
+<a href="">link1</a>
+ 
+</body>
+
+
+</html>
+
+=======================================================
+Xpath Types
+===============
+1.Absolute xpath (full xpath)
+=======================
+- It starts with root element
+- It starts with /
+
+/html/body/nav/input
+
+2.Relative xpath (partail xpath)
+======================================-
+- relative xpath identify element by its relative property
+- It starts with //
+
+//*[@id="email-id"]
+======================================================
+Syntax:
+===========
+//tagname[@attribute='value']
+email
+======
+name="email"
+
+//input[@name='email']
+
+===========================================================
+xpath with operators
+========================
+1. and
+==============
+syntax:
+==========
+//tagname[@attribute='value' and @attribute='value']
+2. or
+=================
+syntax:
+==========
+//tagname[@attribute='value' or @attribute='value']
+
+xpath with indexing and position() last()
+===========================================
+indexing
+===============
+Syntax:
+============
+(xpath)[index_number]
+
+position()
+============
+(xpath)[position()=index]
+
+last()
+above()
+below()
+
+============================
+xpath methods
+================
+text()
+=========
+syntax:
+============
+//tagname[text()='text']
+
+//a[text()='Best Sellers']
+
+normalize-space()
+======================
+ignore white space before and after the text
+
+//tagname[normalize-space()='text']
+
+
+contains()
+===========
+syntax:
+===========
+//tagname[contains(@attribute,value)]
+
+or
+//tagname[contains(text(),'text')]
+
+//input[contains(@id,'two')]
+
+startsWith(prefix)
+======================
+//tagname[starts-with(@attribute,value)]
+
+or
+//tagname[starts-with(text(),'text')]
+
+//input[starts-with(@id,'two')]
+xpath Axies
+==============
+<table id="customers" class="table">-----ancestor
+  
+      <tbody>-----parent for all rows(ancestor for mark)
+
+        <tr>-----parent
+
+          <td>1</td>-------preceding sibling fore mark
+
+          <td>Mark</td>-----child element
+
+          <td>Tompson</td>---following sibling
+
+          <td>the_mark7</td>
+ 
+         <td>
+              <a href="user.html"><i class="icon-pencil"></i></a>
+              <a role="button" href="#myModal" data-toggle="modal"><i class="icon-remove"></i></a>
+          </td>
+
+        </tr>
+
+      </tbody>
+    </table>
+
+Ancestor
+==============
+Syntax:
+=========
+//tagname[@attribute='value']//ancestor::tagname of ancestor
+
+identify ancestor for Mark
+=============================
+//td[text()='Mark']//ancestor::tbody
+
+parent
+===============
+Syntax:
+=========
+//tagname[@attribute='value']//parent::tagname of parent
+identify parent for Mark
+=============================
+//td[text()='Mark']//parent::tr
+
+child
+=====================
+Syntax:
+=========
+//tagname[@attribute='value']//child::tagname of child
+
+all child of first row
+==========================
+(//tbody//tr)[1]//child::td
+
+
+following
+=================
+Syntax:
+=========
+//tagname[@attribute='value']//following::tagname of follwing element
+
+All rows after Mark
+=======================
+//td[text()='Mark']//following::tr ------5 rows
+
+
+preceding
+==============
+Syntax:
+=========
+//tagname[@attribute='value']//preceding::tagname of preceding element
+
+All rows before Mark
+==========================
+//td[text()='Mark']//preceding::tr    1 row match(heading)
+
+following-sibling
+=======================
+Syntax:
+=========
+//tagname[@attribute='value']//following-sibling::tagname of sibling
+
+All following sibling of Mark
+======================================
+
+//td[text()='Mark']//following-sibling::td
+
+preceding-sibling
+======================
+Syntax:
+=========
+//tagname[@attribute='value']//preceding-sibling::tagname of precedingsibling
+
+Preceding sibling of Mark
+===========================
+//td[text()='Mark']//preceding-sibling::td   1 match id
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
