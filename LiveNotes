@@ -597,6 +597,116 @@ Preceding sibling of Mark
 ===========================
 //td[text()='Mark']//preceding-sibling::td   1 match id
 
+========================================================
+8-06-2024
+=============
+Dropdown Element
+====================
+1.Select tag based
+========================
+
+Select class 
+
+Single option selection
+--------------------
+1.SelectById()
+2.SelectByValue("")
+3.selectByVisibleText("")
+
+To test dropdown support multiple selection
+------------------------------------
+isMultiple()
+
+To get all the options 
+----------------------------
+getOptions()
+
+
+2.Bootstrap 
+===================
+
+Inspect+ Locators (xpath)
+
+======================================
+Capabilities are options that you can use to customize and configure a browser session
+
+https://developer.chrome.com/docs/chromedriver/capabilities
+To customize browser session we have classes in selenium as per browsr
+chrome--->ChromeOptions class
+firefox--->FirefoxOptions class
+edge---->EdgeOptions class
+
+
+https://peter.sh/experiments/chromium-command-line-switches/
+disable Notifications:
+=========================
+--disable-notifications
+
+===========================================
+calendar
+================
+testing done
+
+Window Handling
+======================
+Multiple windows
+====================
+1.getWindowHandle() returns String, parentid
+2.getWindowHandles() return set<String> parentid+childid
+3.to switch
+SwitchTo()
+
+new Feature
+================
+newWindow()
+---------------
+Return type of newWindow() is WebDriver interface object
+
+To open new Tab/Window
+WebDriver driver=driver.switchTo().newWindow(WindowType.TAB);
+===================================================================
+Alert Handling
+====================
+
+
+
+
+
+
+
+Frame Handling
+===================
+
+
+Mouse operations- Actions class
+================================
+
+
+File Upload/File Download
+================================
+
+TestNG Framework
+===================
+
+
+
+Hybrid framework design 
+=========================
+
+
+Reporting
+=============
+ExtentReport
+
+AllureReports
+
+
+
+
+Cucumber Framework
+=====================
+
+
 
 
 
