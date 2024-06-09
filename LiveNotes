@@ -153,15 +153,7 @@ In selenium Wait interface available
 2.FluentWait class
 
 WebDriverWait(c) extends FluentWait(c) implements Wait(I)
-
-
-
-
-
-
-
-
-
+============================================================
 =================================================
 1-06-2024
 ================
@@ -665,22 +657,68 @@ Return type of newWindow() is WebDriver interface object
 To open new Tab/Window
 WebDriver driver=driver.switchTo().newWindow(WindowType.TAB);
 ===================================================================
+Capabilities
+=====================
+helps to customized browser session
+chrome--->ChromeOptions
+firefox--->FirefoxOptions
+edge---->EdgeOptions
+
+
+
 Alert Handling
 ====================
+Alert is inteface in selenium
 
+Ok--->accept()
+cancel---->dismiss()
+to get the text of alert--->getText()
+prompt alert--->sendKeys()
 
-
-
-
-
-
+switchTo(): target
+==================================================
 Frame Handling
 ===================
+Html document inside another html document is called frame
 
+tags
+==========
+<frame>
+<iframe>
 
+rule
+===========
+1.using index
+----------------
+driver.switchTo().frame(index)
+
+2.using id/name
+----------------
+driver.switchTo().frame(id/name)
+
+3.using WebElement
+----------------
+declare that frame element as webelement
+driver.switchTo().frame(frame-element)
+
+//Top
+--------------
+driver.switchTo().defaultContent()
+
+//main frame
+---------------
+driver.switchTo().parentFrame()
+
+==================================================
 Mouse operations- Actions class
 ================================
+Actions is a class
 
+
+completed
+========================
+JavascriptExecutor interface
+==============================
 
 File Upload/File Download
 ================================

@@ -3,6 +3,7 @@ package generic;
 import java.time.Duration;
 import java.util.List;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,6 +13,45 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Utility 
 {
+	
+	//alert utilities
+	public static void alertWithOK(WebDriver driver)
+	{
+		//alert window open
+	Alert alt1=driver.switchTo().alert();
+				
+	System.out.println("Alert text: "+alt1.getText());
+				//ok
+	alt1.accept();
+	}
+	
+	
+	public static void alertWithCancel(WebDriver driver)
+	{
+		//alert window open
+	Alert alt1=driver.switchTo().alert();
+				
+	System.out.println("Alert text: "+alt1.getText());
+				//ok
+	alt1.dismiss();
+	}
+	
+	public static void alertWithPrompt(WebDriver driver,String msg)
+	{
+		//alert window open
+	Alert alt1=driver.switchTo().alert();
+				
+	System.out.println("Alert text: "+alt1.getText());
+	alt1.sendKeys(msg);
+	alt1.accept();
+	}
+	
+	
+	
+	
+	
+	
+	
 	
 	//ExplicitWait
 	public static WebElement waitForElementToClick(WebDriver driver,By loc)
