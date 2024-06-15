@@ -722,9 +722,98 @@ JavascriptExecutor interface
 
 File Upload/File Download
 ================================
+File Upload
+=============
+https://the-internet.herokuapp.com/upload
 
+File Download
+================
+https://demo.automationtesting.in/FileDownload.html
+Using ChromePreference
+============================
+chromepref.put("download.default_directory",Filepath);
+options.setExperimentalOption("prefs",chromepref);
+=====================================================
 TestNG Framework
 ===================
+
+1.install testng
+2.add dependency
+Arguments
+=============
+1.priority- sequencing
+2.description
+3.invocationCount= iteration
+4.dependsOnMethod= To set dependency between test
+5.enabled=false/true
+
+Note
+============
+By default testng execute as per alphabetical order so sequencing is imporatant
+using priority you can make test in sequence
+
+By default reports are provided in testng
+========================================
+refresh project-->test-output
+emailable.html
+index.html
+defaultsuite.html
+
+How to disable/ignore any test from testng?
+=========================================
+1.using argument- enabled=false
+2.Using exclude test from testng.xml file
+<class name="testNgDemo.TestDemo_EnableArgument">
+      <methods>
+      <exclude name="addToCartTest"></exclude>
+      </methods>
+   </class>
+
+
+note
+=====
+When you are adding xml file run test from xml as suite
+
+How to run only fail testcase?
+===============================
+under test-output folder-->testng-failed.xml file
+
+Grouping In TestNg
+=================
+Grouping helps to execute test as per there type
+
+<groups>
+<run>
+<include name="Functional"></include>
+</run>
+</groups>
+
+==========================
+Annotations
+
+Hybrid FrameworkDesign
+
+How to pass test data from xml
+
+How to use Properties File
+
+DataDriven Test
+ScreenShots
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -745,9 +834,19 @@ Cucumber Framework
 =====================
 
 
+API Testing
+===============
 
 
+Appium
+============
 
+
+SQL
+==========
+
+
+6 th or 7th July
 
 
 
