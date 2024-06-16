@@ -1,6 +1,7 @@
 package testNgDemo;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 
 public class TestDemo_Invocationcount {
 	@Test(priority=1,description="Test for New Registartion")

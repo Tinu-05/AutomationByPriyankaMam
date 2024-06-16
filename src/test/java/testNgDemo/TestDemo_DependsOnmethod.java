@@ -1,5 +1,7 @@
 package testNgDemo;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -14,7 +16,7 @@ public class TestDemo_DependsOnmethod {
   public void loginTest() 
   {
 	  System.out.println("This is login test");
-	  Assert.assertEquals(true,false);
+	  AssertJUnit.assertEquals(true,false);
   }
   
   @Test(priority=3,dependsOnMethods="loginTest")

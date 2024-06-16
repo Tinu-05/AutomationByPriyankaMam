@@ -2,6 +2,7 @@ package testNgDemo;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 
 public class GroupingTest {
 	@Test(priority=1,groups = "SmokeTest")

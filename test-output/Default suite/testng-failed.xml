@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testNgDemo.TestDemo_EnableArgument">
+      <class name="testngDataPassing.AssertionDemo">
         <methods>
-          <include name="logoutTest"/>
+          <include name="softAssertionTest"/>
         </methods>
-      </class> <!-- testNgDemo.TestDemo_EnableArgument -->
+      </class> <!-- testngDataPassing.AssertionDemo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -717,6 +717,8 @@ Actions is a class
 
 completed
 ========================
+15-06-2024
+====================
 JavascriptExecutor interface
 ==============================
 
@@ -789,7 +791,39 @@ Grouping helps to execute test as per there type
 </groups>
 
 ==========================
+16-06-2024
+==================
+
+Test suite
+===========
+testng.xml file
+
 Annotations
+=================
+done
+
+=======================
+Data Passing using xml
+=========================
+1.create test
+2.create xml
+3.set the parameter
+4.use @Parameters in test
+5.Run the test from xml
+
+=======================
+Parallel execution using xml
+--------------------
+< suite parallel=test>
+
+method level
+class level
+test level
+
+
+
+
+
 
 Hybrid FrameworkDesign
 
@@ -799,23 +833,6 @@ How to use Properties File
 
 DataDriven Test
 ScreenShots
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 Hybrid framework design 
 =========================
@@ -833,6 +850,7 @@ AllureReports
 Cucumber Framework
 =====================
 
+Devops Basics
 
 API Testing
 ===============
