@@ -18,7 +18,7 @@ public class LoginPageTest extends BaseClass
   @Test(priority=3)
   public void validateLogin() 
   {
-	  lp.doLogin("standard_user","secret_sauce");
+	  lp.doLogin(pr.getData("un"),pr.getData("pwd"));
 	  addWait();
   }
 }

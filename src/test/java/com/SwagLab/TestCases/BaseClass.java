@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 
 import com.SwagLab.Pages.*;
+import com.SwagLab.Utility.PropertiesRead;
 
 public class BaseClass
 {
@@ -17,6 +18,7 @@ public class BaseClass
 	public CartPage cp;
 	public CheckoutPage ch;
 	public OverViewPage op;
+	public PropertiesRead pr;
 	
 	@BeforeTest
 	public void setUpBrowser()
@@ -24,6 +26,7 @@ public class BaseClass
 		driver=new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get("https://www.saucedemo.com/");
+		pr=new PropertiesRead("config");
 		lp=new LoginPage(driver);
 		ip=new InventoryPage(driver);
 		cp=new CartPage(driver);

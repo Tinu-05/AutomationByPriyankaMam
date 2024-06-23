@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
+import com.SwagLab.Utility.Utility;
+
 public class CheckoutPage 
 {
 
@@ -28,6 +30,7 @@ public class CheckoutPage
 		driver.findElement(fname).sendKeys(fn);
 		driver.findElement(lname).sendKeys(ln);
 		driver.findElement(pcode).sendKeys(pc);
+		Utility.getScreenshot(driver,"UserDetails");
 		System.out.println("User Details are: "+"fname is: "+fn+" last name is: "+ln+" postalcode is: "+pc);
 		
 		driver.findElement(cbtn).click();

@@ -9,7 +9,7 @@ public class InventoryPageTest extends BaseClass
 	@BeforeClass
 	public void pageSetup()
 	{
-		lp.doLogin("standard_user","secret_sauce");
+		lp.doLogin(pr.getData("un"),pr.getData("pwd"));
 	}
 	
   @Test(priority=1)
@@ -28,7 +28,7 @@ public class InventoryPageTest extends BaseClass
   @Test(priority=3)
   public void ValidateAddToCart()
   {
-	  ip.addProductToCart("Test.allTheThings() T-Shirt (Red)");
+	  ip.addProductToCart(pr.getData("pname1"));
 	  addWait();
   }
   

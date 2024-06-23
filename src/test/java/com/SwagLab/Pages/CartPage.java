@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
+import com.SwagLab.Utility.Utility;
+
 public class CartPage
 {
 private WebDriver driver;
@@ -38,6 +40,7 @@ public void doRemove()
 	driver.findElement(rbtn).click();	
 	}
 	
+	Utility.getScreenshot(driver,"ProductRemoved");
 	System.out.println("Product is removed!");
 }
 
@@ -53,6 +56,7 @@ public void doContinueShopping()
 public void getCheckoutPage()
 {
 	driver.findElement(chkbtn).click();
+	Utility.getScreenshot(driver,"CheckoutPage");
 	Assert.assertTrue(driver.getCurrentUrl().contains("checkout"),"CheckOut Page not open");
 	System.out.println("Checkout page is open!");
 }

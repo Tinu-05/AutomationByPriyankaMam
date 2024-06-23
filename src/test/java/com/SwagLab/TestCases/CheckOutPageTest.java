@@ -8,8 +8,8 @@ public class CheckOutPageTest extends BaseClass
 	@BeforeClass
 	public void pagesetup()
 	{
-		lp.doLogin("standard_user","secret_sauce");
-		ip.addProductToCart("Sauce Labs Backpack");
+		lp.doLogin(pr.getData("un"),pr.getData("pwd"));
+		ip.addProductToCart(pr.getData("pname2"));
 		ip.getCartPage();
 		 addWait();
 		 cp.getCheckoutPage();
@@ -17,6 +17,6 @@ public class CheckOutPageTest extends BaseClass
   @Test(priority=1)
   public void validateCheckOut()
   {
-	  ch.doCheckOut("Priyanka","Nigade","411047");
+	  ch.doCheckOut(pr.getData("fn"),pr.getData("ln"),pr.getData("pc"));
   }
 }

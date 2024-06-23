@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
+import com.SwagLab.Utility.Utility;
+
 public class LoginPage 
 {
 	private WebDriver driver;
@@ -39,6 +41,7 @@ public class LoginPage
 	{
 	driver.findElement(username).sendKeys(un);
 	driver.findElement(pasword).sendKeys(pws);
+	Utility.getScreenshot(driver,"SwagLabLogin");
 	driver.findElement(btn).click();
 	
 	Assert.assertTrue(driver.getCurrentUrl().contains("inventory"),"Login Fail");

@@ -9,12 +9,13 @@ public class OverViewPageTest extends BaseClass
 	@BeforeClass
 	public void pagesetup()
 	{
-		lp.doLogin("standard_user","secret_sauce");
-		ip.addProductToCart("Sauce Labs Backpack");
+
+		lp.doLogin(pr.getData("un"),pr.getData("pwd"));
+		ip.addProductToCart(pr.getData("pname2"));
 		ip.getCartPage();
 		 addWait();
 		 cp.getCheckoutPage();
-		 ch.doCheckOut("Jay","Nigade","411047");
+		 ch.doCheckOut(pr.getData("fn"),pr.getData("ln"),pr.getData("pc"));
 	}
   @Test(priority=1)
   public void verifySummary()

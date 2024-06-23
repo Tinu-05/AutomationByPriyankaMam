@@ -3,6 +3,8 @@ package com.SwagLab.Pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import com.SwagLab.Utility.Utility;
+
 public class OverViewPage
 {
 
@@ -25,13 +27,16 @@ public class OverViewPage
 	//methods
 	public void getSummary()
 	{
+		
 		System.out.println("*******Product Summary*********");
 		System.out.println(driver.findElement(summary).getText());
+		Utility.getScreenshot(driver,"Summary");
 	}
 	
 	public void doFinish()
 	{
 		driver.findElement(fbtn).click();
+		Utility.getScreenshot(driver,"SuccessMessage");
 		System.out.println("Success Message: "+driver.findElement(msg).getText());
 	}
 }
