@@ -13,7 +13,8 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(features="src/test/resources/Features/amazon.feature",
 					glue="stepdef",
-					tags="not @ignore")
+					tags="not @ignore",
+					plugin={"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
 public class AmazonRunner {
 
 }
