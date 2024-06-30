@@ -825,7 +825,7 @@ test level
 
 
 
-Hybrid FrameworkDesign
+Hybrid FrameworkDesigndone
 
 How to pass test data from xml
 
@@ -834,21 +834,16 @@ How to use Properties File
 DataDriven Test
 ScreenShots
 
-Hybrid framework design 
-=========================
-
-
 Reporting
 =============
-ExtentReport
+ExtentReport- done
 
 AllureReports
 
-
-
-
 Cucumber Framework
 =====================
+
+PageObjectModel
 
 Devops Basics
 

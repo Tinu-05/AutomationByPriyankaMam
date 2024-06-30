@@ -2,7 +2,9 @@ package generic;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 import java.util.List;
 
 import org.openqa.selenium.Alert;
@@ -20,14 +22,18 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class Utility 
 {
 	
+	public static String timestamp()
+	{
+		return new SimpleDateFormat("yyyyMMdd").format(new Date());
+	}
 	
 	
-	public void getScreenshot(WebDriver driver,String filename)
+	public static void getScreenshot(WebDriver driver,String filename)
 	{
 		TakesScreenshot ts=(TakesScreenshot) driver;
 		  
 		  File temp=ts.getScreenshotAs(OutputType.FILE);
-		  File dest=new File(System.getProperty("user.dir")+"//Screenshots//"+filename+System.currentTimeMillis()+".png");
+		  File dest=new File(System.getProperty("user.dir")+"//Screenshots//"+filename+timestamp()+".png");
 		  
 		  try {
 			FileHandler.copy(temp, dest);
