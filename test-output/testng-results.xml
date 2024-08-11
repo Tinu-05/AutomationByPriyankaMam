@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-10T13:01:55 IST" name="Default suite" finished-at="2024-08-10T13:02:07 IST" duration-ms="12298">
+  <suite started-at="2024-08-11T13:07:09 IST" name="Default suite" finished-at="2024-08-11T13:07:37 IST" duration-ms="27754">
     <groups>
     </groups>
-    <test started-at="2024-08-10T13:01:55 IST" name="Default test" finished-at="2024-08-10T13:02:07 IST" duration-ms="12298">
-      <class name="MobileElementInteraction.LocatorStrategy">
-        <test-method signature="testElements()[pri:0, instance:MobileElementInteraction.LocatorStrategy@1e04fa0a]" started-at="2024-08-10T13:01:55 IST" name="testElements" finished-at="2024-08-10T13:02:07 IST" duration-ms="12231" status="PASS">
+    <test started-at="2024-08-11T13:07:09 IST" name="Default test" finished-at="2024-08-11T13:07:37 IST" duration-ms="27754">
+      <class name="mobileScemarios.WorkingWithApp">
+        <test-method signature="testApp()[pri:0, instance:mobileScemarios.WorkingWithApp@5acf93bb]" started-at="2024-08-11T13:07:09 IST" name="testApp" finished-at="2024-08-11T13:07:37 IST" duration-ms="27679" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testElements -->
-      </class> <!-- MobileElementInteraction.LocatorStrategy -->
+        </test-method> <!-- testApp -->
+      </class> <!-- mobileScemarios.WorkingWithApp -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

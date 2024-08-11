@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="driverSession.CreateFirstDriverSession">
+      <class name="mobileScemarios.ToggleSetup">
         <methods>
-          <include name="testConnection"/>
+          <include name="testToggleWifi_Data_AirplaineMode"/>
         </methods>
-      </class> <!-- driverSession.CreateFirstDriverSession -->
+      </class> <!-- mobileScemarios.ToggleSetup -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
